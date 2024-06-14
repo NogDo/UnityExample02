@@ -25,7 +25,7 @@ public class CRandomStack : MonoBehaviour
     }
 
     /// <summary>
-    /// 랜덤 큐 코루틴 실행, 큐에 데이터가 있다면 1초에 한번씩 데이터를 보여준다.
+    /// 랜덤 스택 코루틴 실행, 스택에 데이터가 있다면 1초에 한번씩 데이터를 보여준다.
     /// </summary>
     /// <returns></returns>
     IEnumerator ActiveRandomStack()
