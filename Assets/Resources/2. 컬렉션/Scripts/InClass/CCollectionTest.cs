@@ -35,7 +35,7 @@ public class CCollectionTest : MonoBehaviour
     #region 딕셔너리
     // 배열은 공간복잡도가 낮고 시간복잡도가 높은 자료형이라면
     // 딕셔너리(해시테이블)은 공간복잡도가 높고 시간복잡도가 낮은 자료형이다.
-    private Dictionary<string, GameObject> dictionaty = new Dictionary<string, GameObject>();
+    private Dictionary<string, GameObject> dictionary = new Dictionary<string, GameObject>();
 
     // ArrayList처럼 박싱된 형태로 자료형이 할당된다.
     private Hashtable hashtable = new Hashtable();
@@ -111,16 +111,16 @@ public class CCollectionTest : MonoBehaviour
 
 
         // 딕셔너리 원소 추가
-        dictionaty.Add("cube", cube);
-        dictionaty.Add("sphere", sphere);
-        dictionaty.Add("cylinder", cylinder);
-        dictionaty.Add("capsule", capsule);
+        dictionary.Add("cube", cube);
+        dictionary.Add("sphere", sphere);
+        dictionary.Add("cylinder", cylinder);
+        dictionary.Add("capsule", capsule);
 
         // 딕셔너리 참조
-        dictionaty["capsule"].GetComponent<Renderer>().material.color = Color.red;
-        dictionaty["sphere"].GetComponent<Renderer>().material.color = Color.blue;
-        dictionaty["cube"].GetComponent<Renderer>().material.color = Color.green;
-        dictionaty["cylinder"].GetComponent<Renderer>().material.color = Color.black;
+        dictionary["capsule"].GetComponent<Renderer>().material.color = Color.red;
+        dictionary["sphere"].GetComponent<Renderer>().material.color = Color.blue;
+        dictionary["cube"].GetComponent<Renderer>().material.color = Color.green;
+        dictionary["cylinder"].GetComponent<Renderer>().material.color = Color.black;
 
         // 해쉬테이블 원소 추가
         hashtable.Add("a", 1);
