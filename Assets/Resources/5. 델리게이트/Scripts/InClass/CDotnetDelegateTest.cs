@@ -26,7 +26,6 @@ public class CDotnetDelegateTest : MonoBehaviour
 
         parseFunc = Parse;
 
-
         // Predicate 사용 이유
         // Predicate의 경우, 일부 컬렉션 함수의 조건 판단을 위한 정의를 Bool을 리턴하는 함수의 형태로 받기 위해 활용됨.
         List<int> intList = new List<int>();
@@ -36,6 +35,7 @@ public class CDotnetDelegateTest : MonoBehaviour
         intList.Add(8);
         intList.Add(9);
         intList.Add(10);
+
 
         // intList에서 짝수만 뽑아오고 싶다.
         List<int> evenList = intList.FindAll(IsEven);
