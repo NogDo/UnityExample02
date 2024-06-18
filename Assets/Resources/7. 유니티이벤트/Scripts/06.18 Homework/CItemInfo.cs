@@ -15,6 +15,9 @@ public class CItemInfo : MonoBehaviour
     List<ItemInformation> showItemList;
     #endregion
 
+    /// <summary>
+    /// 아이템 정보 리스트
+    /// </summary>
     public List<ItemInformation> Item
     {
         get
@@ -23,6 +26,9 @@ public class CItemInfo : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 보여줄 아이템 리스트 개수
+    /// </summary>
     public int Count
     {
         get
@@ -31,6 +37,9 @@ public class CItemInfo : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 아이템 정보 JSON파일로 저장
+    /// </summary>
     public void SaveItemInformation()
     {
         string path = $"{Application.streamingAssetsPath}/ItemInformation.json";
@@ -39,6 +48,9 @@ public class CItemInfo : MonoBehaviour
         File.WriteAllText(path, json);
     }
 
+    /// <summary>
+    /// JSON으로 저장된 아이템 정보를 List에 할당
+    /// </summary>
     public void LoadItemInformation()
     {
         DirectoryInfo di = new DirectoryInfo(Application.streamingAssetsPath);
@@ -50,6 +62,9 @@ public class CItemInfo : MonoBehaviour
     }
 }
 
+/// <summary>
+/// 아이템 정보가 담긴 클래스
+/// </summary>
 [System.Serializable]
 public class ItemInformation
 {
