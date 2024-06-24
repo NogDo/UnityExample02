@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using FileTestProject;
 
 [CustomEditor(typeof(CFileTest))]
 public class CFileTestEditor : Editor
