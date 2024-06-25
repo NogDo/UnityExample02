@@ -13,6 +13,9 @@ public class UISkillInvetorySlot : MonoBehaviour,
     Skill0625 skill;
     #endregion
 
+    /// <summary>
+    /// 슬롯이 가지고 있는 스킬 정보
+    /// </summary>
     public virtual Skill0625 Skill
     {
         get
@@ -51,8 +54,6 @@ public class UISkillInvetorySlot : MonoBehaviour,
         }
 
         skillIcon.rectTransform.SetParent(CSkillManager0625.Instance.skillPage);
-
-        //CSkillManager0625.Instance.selectedSlot = this;
     }
 
     public void OnDrag(PointerEventData data)
@@ -82,6 +83,8 @@ public class UISkillInvetorySlot : MonoBehaviour,
         }
 
         skillIcon.rectTransform.SetParent(transform);
+        // 자식들 중 최상당에 위치하도록하기 위한 함수 (부모를 재설정하면 원래 있던 이미지들보다 늦게 렌더링 되면서 쿨타임, 텍스트를 가리게 됨)
+        skillIcon.rectTransform.SetAsFirstSibling();
         skillIcon.rectTransform.anchoredPosition = Vector2.zero;
     }
 

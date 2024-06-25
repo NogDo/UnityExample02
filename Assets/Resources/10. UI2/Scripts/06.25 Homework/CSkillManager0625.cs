@@ -25,7 +25,6 @@ public class CSkillManager0625 : MonoBehaviour
     public RectTransform skillPage;
 
     public UISkillInvetorySlot focusedSlot;
-    //public UISkillInvetorySlot selectedSlot;
     #endregion
 
     void Awake()
