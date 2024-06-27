@@ -8,8 +8,6 @@ using Newtonsoft.Json;
 
 namespace FileTestProject
 {
-
-
     public class CFileTest : MonoBehaviour
     {
         #region public º¯¼ö
