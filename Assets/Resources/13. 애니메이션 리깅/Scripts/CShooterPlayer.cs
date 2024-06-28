@@ -101,7 +101,6 @@ public class CShooterPlayer : MonoBehaviour
         }
         isReloading = true;
 
-        rig.weight = 0;
         animator.SetTrigger("Reload");
 
         StartCoroutine(RigWeightLerp(1.0f, 1.0f, 0.0f));
@@ -125,7 +124,6 @@ public class CShooterPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         isReloading = false;
-        rig.weight = 1.0f;
 
         StartCoroutine(RigWeightLerp(0.1f, 0.0f, 1.0f));
     }
@@ -138,7 +136,6 @@ public class CShooterPlayer : MonoBehaviour
         }
         isThrowGrenade = true;
 
-        rig.weight = 0;
         animator.SetTrigger("Grenade");
         guns[nCurrentGun].gameObject.SetActive(false);
 
@@ -150,7 +147,6 @@ public class CShooterPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         isThrowGrenade = false;
-        rig.weight = 1.0f;
         guns[nCurrentGun].gameObject.SetActive(true);
 
         StartCoroutine(RigWeightLerp(0.1f, 0.0f, 1.0f));
